@@ -1,0 +1,19 @@
+{
+  "emailLabel": "To access the app please inform your",
+  "smallEmail": "email",
+  "capitalEmail": "Email",
+  "smallPassword": "password",
+  "capitalPassword": "Password",
+  "passwordLabel": "Now type your",
+  "access": "Access",
+  "loginError": "Please fill all fields",
+  "feed": "Image feed",
+  "picture": "Take picture",
+  "more": "More...",
+  "moreTitle": "CTIS Technical Test",
+  "version": "Version",
+  "buildNum": "Build number",
+  "exit": "Exit",
+  "cancel": "Cancel",
+  "photo": "Photo"
+}
