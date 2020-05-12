@@ -4,12 +4,12 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
-  ActivityIndicator
+  ActivityIndicator,
+  Text
 } from 'react-native';
 import { scale, verticalScale } from 'react-native-size-matters'
 import Toast from 'react-native-simple-toast';
 import i18n from '../../translations';
-import { Text } from '../../components/StyledText';
 import { TextInput } from '../../components';
 import { colors } from '../../styles';
 
@@ -22,20 +22,34 @@ export default function LoginView(props) {
   const [user, setUser] = useState(undefined);
   const [password, setPassword] = useState(undefined);
 
-  const onLogin = () => {
-    if (user && password) {
-      setIsLoading(true);
-      setTimeout(() => {
-        props.navigation.navigate('Navigator');
-        setIsLoading(false);
-        setUser('');
-        setPassword('');
-      }, 2500);
-    } else {
-      if (!user) setEmailUnderlineColor(colors.error);
+  const { login } = props;
+
+  function onError() {
+    if (!user) setEmailUnderlineColor(colors.error);
       if (!password) setPasswordUnderlineColor(colors.error);
       Toast.show(i18n.t('loginError'), Toast.LONG);
+  }
+
+  function onSuccess() {
+    setIsLoading(true);
+    setTimeout(() => {
+      props.navigation.navigate('Navigator');
+      setIsLoading(false);
+      setUser('');
+      setPassword('');
+    }, 2500);
+  }
+
+  const onLogin = () => {
+    if (user && password) {
+      onSuccess();
+    } else {
+      onError();
     }
+  }
+
+  if (login) {
+    login({user, password});
   }
   
   return (
@@ -52,6 +66,7 @@ export default function LoginView(props) {
           <Text style={{fontWeight: 'bold'}}>{i18n.t('smallEmail')}</Text>
         </Text>
         <TextInput 
+          testID='user'
           placeholderTextColor='gray'
           placeholder={i18n.t('capitalEmail')}
           underlineColorAndroid={emailUnderlineColor}
@@ -67,7 +82,8 @@ export default function LoginView(props) {
           {i18n.t('passwordLabel')}&nbsp;
           <Text style={{fontWeight: 'bold'}}>{i18n.t('smallPassword')}</Text>
         </Text>
-        <TextInput 
+        <TextInput
+          testID='password'
           placeholderTextColor='gray'
           placeholder={i18n.t('capitalPassword')}
           underlineColorAndroid={passwordUnderlineColor}
@@ -81,9 +97,10 @@ export default function LoginView(props) {
         />
       </View>
       <View style={styles.bottomContainer}>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.accessButton}
           onPress={() => {onLogin()}}
+          testID='button'
         >
           <ActivityIndicator
             style={{position: 'absolute'}}

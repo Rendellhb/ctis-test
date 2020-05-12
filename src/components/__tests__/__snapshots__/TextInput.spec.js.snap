@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "flexDirection": "column",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    placeholderTextColor="#ffffff"
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "color": "white",
+          "fontFamily": "Lato-Regular",
+          "height": 40,
+        },
+        false,
+        undefined,
+        undefined,
+      ]
+    }
+    underlineColorAndroid="white"
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "height": 0.5,
+      }
+    }
+  />
+</View>
+`;

@@ -4,8 +4,8 @@ import MoreScreen from '../more/MoreView';
 import i18n from '../../translations';
 
 const feedIcon = require('../../../assets/images/tabbar/feed.png');
-const pictureIcon = require('../../../assets/images/tabbar/picture.png');
-const dotsIcon = require('../../../assets/images/tabbar/dots.png');
+const pictureIcon = require('../../../assets/images/icons/pictureIcon.png');
+const dotsIcon = require('../../../assets/images/tabbar/more.png');
 
 const tabNavigationData = [
   {
@@ -15,7 +15,7 @@ const tabNavigationData = [
   },
   {
     name: i18n.t('picture'),
-    component: () => {props.navigation.navigate('PictureScreen')},
+    component: PictureScreen,
     icon: pictureIcon,
   },
   {

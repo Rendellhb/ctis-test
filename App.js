@@ -7,7 +7,7 @@ import { colors } from './src/styles';
 
 import { store, persistor } from './src/redux/store';
 
-import AppView from './src/modules/AppViewContainer';
+import AppView from './src/modules/AppView';
 
 export default function App() {
   return (

@@ -14,7 +14,7 @@ import { colors } from '../../styles';
 const flashIcon = require('../../../assets/images/icons/flash.png');
 const pictureButton = require('../../../assets/images/icons/pictureIcon.png');
 
-export default function PictureView() {
+export default function PictureView(props) {
   const [flash, setFlash] = useState(RNCamera.Constants.FlashMode.off)
   const [cameraType, setCameraType] = useState('back')
   let camera = () => {}
@@ -22,8 +22,7 @@ export default function PictureView() {
   const takePicture = async () => {
     if (camera) {
       const options = { quality: 0.5, base64: true };
-      const data = await camera.takePictureAsync(options);
-      console.log(data.uri);
+      await camera.takePictureAsync(options);
     }
   };
 
@@ -69,9 +68,14 @@ export default function PictureView() {
         captureAudio={false}
       />
       <View style={styles.bottomContainer}>
-        <Text style={[styles.cancelText, styles.text]}>
-          {i18n.t('cancel')}
-        </Text>
+        <TouchableOpacity 
+          style={{flex: 1.5, justifyContent: 'center'}}
+          onPress={() => {props.navigation.navigate(i18n.t('feed'))}}
+        >
+          <Text style={[styles.cancelText, styles.text]}>
+            {i18n.t('cancel')}
+          </Text>
+        </TouchableOpacity>
         <View style={styles.takePhotoContainer}>
           <Text style={[styles.text, {marginLeft: scale(10)}]}>
             {i18n.t('photo')}
@@ -122,7 +126,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   cancelText: {
-    flex: 1.5,
     textAlign: 'center',
     alignSelf: 'center'
   },

@@ -28,7 +28,7 @@ export default function HomeView() {
 
   const renderRow = rowData => {
     const cellViews = rowData.item.map(item => (
-      <View style={styles.itemOneImageContainer}>
+      <View key={item.id} style={styles.itemOneImageContainer}>
         <Image style={styles.itemOneImage} source={{ uri: item.thumbnailUrl }} />
       </View>
     ));
