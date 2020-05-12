@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ReactNativeStarter.xcodeproj">
+      location = "group:/Users/rendellhb/Documents/ctis-test/ios/ctis-test.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -30,8 +30,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
                BuildableName = "ReactNativeStarter.app"
-               BlueprintName = "ReactNativeStarter"
-               ReferencedContainer = "container:ReactNativeStarter.xcodeproj">
+               BlueprintName = "ctis-test"
+               ReferencedContainer = "container:ctis-test.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ReactNativeStarterTests.xctest"
-               BlueprintName = "ReactNativeStarterTests"
-               ReferencedContainer = "container:ReactNativeStarter.xcodeproj">
+               BuildableName = "ctis-testTests.xctest"
+               BlueprintName = "ctis-testTests"
+               ReferencedContainer = "container:ctis-test.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ReactNativeStarterTests.xctest"
-               BlueprintName = "ReactNativeStarterTests"
-               ReferencedContainer = "container:ReactNativeStarter.xcodeproj">
+               BuildableName = "ctis-testTests.xctest"
+               BlueprintName = "ctis-testTests"
+               ReferencedContainer = "container:ctis-test.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -72,8 +72,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "ReactNativeStarter.app"
-            BlueprintName = "ReactNativeStarter"
-            ReferencedContainer = "container:ReactNativeStarter.xcodeproj">
+            BlueprintName = "ctis-test"
+            ReferencedContainer = "container:ctis-test.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -95,8 +95,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "ReactNativeStarter.app"
-            BlueprintName = "ReactNativeStarter"
-            ReferencedContainer = "container:ReactNativeStarter.xcodeproj">
+            BlueprintName = "ctis-test"
+            ReferencedContainer = "container:ctis-test.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -114,8 +114,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "ReactNativeStarter.app"
-            BlueprintName = "ReactNativeStarter"
-            ReferencedContainer = "container:ReactNativeStarter.xcodeproj">
+            BlueprintName = "ctis-test"
+            ReferencedContainer = "container:ctis-test.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
